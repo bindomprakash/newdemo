@@ -1,0 +1,23 @@
+<div class="main">
+    <select (change)="getData($event)">
+        <option value="Select data">Select data.</option>
+        <option value="Laptop">Laptop</option>
+        <option value="TV">TV</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Freeze">Freeze</option>
+        <option value="Cooler">Cooler</option>
+        <option value="Washing-machine">Washing-machine</option>
+    </select>
+</div>
+
+<div class="main" style="color: blue;">
+    <ng-container [ngSwitch]="selectedData">
+        <h3 *ngSwitchCase="'Laptop'">Laptop</h3>
+        <h3 *ngSwitchCase="'TV'">TV</h3>
+        <h3 *ngSwitchCase="'Mobile'">Mobile</h3>
+        <h3 *ngSwitchCase="'Freeze'">Freeze</h3>
+        <h3 *ngSwitchCase="'Cooler'">Cooler</h3>
+        <h3 *ngSwitchCase="'Washing-machine'">Washing-machine</h3>
+        <h3 *ngSwitchDefault>Please Select data.</h3>
+    </ng-container>
+</div>

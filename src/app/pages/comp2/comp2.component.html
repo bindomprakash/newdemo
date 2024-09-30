@@ -1,0 +1,18 @@
+<h2>Component two</h2>
+<input type="text" name="" id="" placeholder="Enter value" #ticket>
+<button (click)="bookTicket(ticket.value)">Book-Ticket</button>
+
+<!-- <ul *ngIf="let listTicket of countTicket">
+    <li>
+        {{listTicket}}
+    </li>
+</ul> -->
+<div>
+    <ul *ngFor="let ticket of countTicket">
+        <li>{{ticket}}</li>
+    </ul>
+</div>
+
+<div class="btn">
+    <button>submit</button>
+</div>

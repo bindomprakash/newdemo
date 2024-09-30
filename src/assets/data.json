@@ -1,0 +1,19 @@
+[
+  {
+    "customer": {
+      "id": 1,
+      "name": "omprakash",
+      "email": "op@gmail.com",
+      "address": "Aghawar",
+      "post": "Dewari"
+    },
+    "product": {
+      "id": 102,
+      "pname": "mobile",
+      "mname": "Nokia",
+      "color": "red",
+      "price": 40000,
+      "model": 2021
+    }
+  }
+]
