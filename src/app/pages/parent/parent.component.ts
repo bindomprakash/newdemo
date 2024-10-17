@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
+import { interval, Subscription, take } from 'rxjs';
 
 @Component({
   selector: 'app-parent',
@@ -8,22 +9,41 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ParentComponent {
 
-  userName = "shivance";
   ename = "hina";
   childData: string = "";
+  userName: string = "shivance";
+  subscription!: Subscription;
+
   @ViewChild(ChildComponent) child!: ChildComponent;
 
-  getChildData(e: any){
+  constructor() { }
+
+  ngOnInit() {
+    const obs = interval(1000);
+    this.subscription = obs.subscribe((res: any) => {
+      console.log("Video: ", res);
+      if (res >= 5) {
+        this.subscription.unsubscribe()
+      }
+    })
+
+  }
+
+  getChildData(e: any) {
     console.log(e);
     this.childData = e;
   }
 
-  changeProperty(){
+  changeProperty() {
     this.child.username = "pinky";
     // alert(this.child.username);
+    this.userName = "dinesh singh"
   }
 
-  changeMethod(){
+  changeMethod() {
     this.child.onSubmit();
+    this.userName = "dinesh singh"
   }
+
 }
+

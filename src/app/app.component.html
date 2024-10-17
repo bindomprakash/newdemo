@@ -1,1 +1,41 @@
 <app-header></app-header>
+
+<button type="button" (click)="toggleComponent()">{{isDestroy? 'CreateComponent': 'DestroyComponent'}}</button><br><br>
+<hr>
+<app-clock *ngIf="!isDestroy"></app-clock>
+
+<input type="text" placeholder="Enter a value" #val>&nbsp;
+<button type="button" (click)="onPush(val)">push</button>&nbsp;
+<button type="button" (click)="onPop()">pop</button>&nbsp;
+<button type="button" (click)="isEmpty()">isEmplty</button>&nbsp;
+<button type="button" (click)="isListfULL()">isListFull</button>&nbsp;
+
+<h4>Save item is:</h4>
+<ng-container>
+  <ul *ngFor="let item of saveItem; index as i">
+    <li>
+      {{item}}&nbsp;
+      <button type="button" (click)="deletList(i)" class="text-danger">delete</button>
+    </li>
+  </ul>
+</ng-container>
+
+<p *ngIf="emptyMode">{{listIsEmpty}}</p>
+<p *ngIf="checkListMode">{{listIsFull}}</p><br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData">
+      <td [ngStyle]="{'background-color': user.id == 1 ? 'yellow': 'null'}">{{user.id}}</td>
+      <td [ngStyle]="getDynamicStyle()">{{user.name}}</td>
+      <td appValid>{{user.city}}</td>
+    </tr>
+  </tbody>
+</table>

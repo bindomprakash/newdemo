@@ -25,6 +25,13 @@ import { CardComponent } from './pages/card/card.component';
 import { CustomDirective } from './directive/custom.directive';
 import { CustomPipe } from './pipes/custom.pipe';
 import { AuthService } from './services/auth.service';
+import { EmployeeComponent } from './pages/employee/employee.component';
+import { TemplateComponent } from './pages/template/template.component';
+import { ClockComponent } from './pages/clock/clock.component';
+import { ValidDirective } from './directives/valid.directive';
+import { TableComponent } from './shared/table/table.component';
+import { CommontableComponent } from './pages/commontable/commontable.component';
+import { Table2Component } from './pages/table2/table2.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +54,13 @@ import { AuthService } from './services/auth.service';
     CardComponent,
     CustomDirective,
     CustomPipe,
+    EmployeeComponent,
+    TemplateComponent,
+    ClockComponent,
+    ValidDirective,
+    TableComponent,
+    CommontableComponent,
+    Table2Component,
   ],
   imports: [
     BrowserModule,

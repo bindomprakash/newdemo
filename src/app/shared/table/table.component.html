@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+        <tr *ngIf="collname">
+            <th scope="col" *ngFor="let coll of collname">{{coll}}</th>
+
+        </tr>
+        <tr *ngIf="colltab2">
+            <th scope="col" *ngFor="let coll of colltab2">{{coll}}</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngIf="empData">
+            <tr *ngFor="let emp of empData">
+                <td>{{emp.firstName}}</td>
+                <td>{{emp.lastName}}</td>
+                <td>{{emp.email}}</td>
+            </tr>
+        </ng-container>
+
+        <ng-container *ngIf="userData">
+            <tr *ngFor="let user of userData">
+                <td>{{user.name}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.currency}}</td>
+            </tr>
+        </ng-container>
+
+    </tbody>
+</table>

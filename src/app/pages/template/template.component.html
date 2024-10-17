@@ -1,0 +1,22 @@
+<h4>Template reference variable..</h4> <br>
+<input type="text" placeholder="Enter value" #inpVal > &nbsp;
+<button (click)="onClick(inpVal)">Click Here</button><br><br><br><hr>
+
+<h4>checkbox reference...</h4>
+<input type="checkbox" #checkVal> &nbsp;
+<button (click)="onCheckBox(checkVal)">check-box</button><br><br><br><hr>
+
+<h4>Radio reference...</h4>
+<input type="radio" name="gender" value="male" #m>Male
+<input type="radio" name="gender" value="female" #f>Female
+<button (click)="onRadio(m.checked? m.value : f.value)">radio-box</button><br><br><br><hr>
+
+<h4>Dropdown reference..</h4>
+<select  #select>
+    <option value="one">One</option>
+    <option value="two">Two</option>
+    <option value="three">Three</option>
+    <option value="four">Four</option>
+    <option value="five">Five</option>
+</select>&nbsp;&nbsp;
+<button (click)="onSelect(select)">Select-Data</button>

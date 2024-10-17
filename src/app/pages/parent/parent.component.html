@@ -8,5 +8,5 @@
 
 
 <div class="main" style="border: 1px solid red; height: 200px; width: 100%; margin: 10px; padding: 10px;">
-    <app-child [myname]="ename" (sentValue)="getChildData($event)"></app-child>
+    <app-child [myname]="ename" (sentValue)="getChildData($event)"><p><b>Ng-content:</b> {{userName}}</p></app-child>
 </div>
